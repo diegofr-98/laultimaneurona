@@ -2,15 +2,15 @@
 import { LOGO_IMAGE, SITE } from "@config";
 import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
-
+import { isAndroid, isIOS, isIOS13, isTablet } from 'react-device-detect';
 import logoPNG from "/assets/neurona.png";
-import logoSVG from "/assets/neurona.svg";
 
 export interface Props {
   activeNav?: "posts" | "tags" | "about" | "search";
 }
 
 const { activeNav } = Astro.props;
+const isDevice = () => isAndroid ?? isIOS ?? isIOS13 ?? isTablet;
 ---
 
 <header>
@@ -21,7 +21,7 @@ const { activeNav } = Astro.props;
         {
           LOGO_IMAGE.enable ? (
             <img
-              src={LOGO_IMAGE.svg ? logoSVG : logoPNG}
+              src={ isDevice() ? SITE.title : logoPNG}
               alt={SITE.title}
               width={LOGO_IMAGE.width}
               height={LOGO_IMAGE.height}
