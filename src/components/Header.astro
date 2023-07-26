@@ -2,8 +2,9 @@
 import { LOGO_IMAGE, SITE } from "@config";
 import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
-import { isMobile } from 'react-device-detect';
+import { BrowserView, MobileView } from 'react-device-detect';
 import logoPNG from "/assets/neurona.png";
+import mobilePNG from "/assets/logo.png";
 
 export interface Props {
   activeNav?: "posts" | "tags" | "about" | "search";
@@ -16,11 +17,28 @@ const { activeNav } = Astro.props;
   <a id="skip-to-content" href="#main-content">Skip to content</a>
   <div class="nav-container">
     <div class="top-nav-wrap">
-      <a href="/" class="logo">
+      <BrowserView>
+        <a href="/" class="logo"></a>
+          {
+            LOGO_IMAGE.enable ? (
+              <img
+                src={logoPNG}
+                alt={SITE.title}
+                width={LOGO_IMAGE.width}
+                height={LOGO_IMAGE.height}
+              />
+            ) : (
+              SITE.title
+            )
+          }
+        </a>
+      </BrowserView>
+      <MobileView>
+        <a href="/" class="logo"></a>
         {
           LOGO_IMAGE.enable ? (
             <img
-              src={ isMobile ? SITE.title : logoPNG}
+              src={mobilePNG}
               alt={SITE.title}
               width={LOGO_IMAGE.width}
               height={LOGO_IMAGE.height}
@@ -30,6 +48,7 @@ const { activeNav } = Astro.props;
           )
         }
       </a>
+      </MobileView>
       <nav id="nav-menu">
         <button
           class="hamburger-menu focus-outline"
