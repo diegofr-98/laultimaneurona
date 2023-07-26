@@ -10,7 +10,7 @@ export interface Props {
 }
 
 const { activeNav } = Astro.props;
-const isDevice = () => isAndroid ?? isIOS ?? isIOS13 ?? isTablet;
+const isDevice = () => isAndroid || isIOS || isIOS13;
 ---
 
 <header>
