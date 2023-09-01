@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "Diego Franco Roy",
   desc: "Blog de software y desarrollo web dónde comparto mis conocimentos.",
   title: "La Última Neurona",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "og.jpeg",
   lightAndDarkMode: true,
   postPerPage: 4,
 };

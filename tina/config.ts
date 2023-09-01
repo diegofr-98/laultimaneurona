@@ -69,6 +69,11 @@ export default defineConfig({
             required: true,
           },
           {
+            type: "image",
+            name: "ogImage",
+            label: "Og Image",
+          },
+          {
             type: 'string',
             name: 'tags',
             label: 'Tags',
