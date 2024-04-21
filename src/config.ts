@@ -23,7 +23,13 @@ export const SOCIALS: SocialObjects = [
   {
     name: "Github",
     href: "https://github.com/diegofr-98",
-    linkTitle: ` ${SITE.title} on Github`,
+    linkTitle: ` ${SITE.author} on Github`,
+    active: true,
+  },
+  {
+    name: "CV",
+    href: "https://www.canva.com/design/DAF9Rz_ax6w/JTSnspwBcUH-loJChjU-Dg/view?utm_content=DAF9Rz_ax6w&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+    linkTitle: ` ${SITE.author} CV`,
     active: true,
   },
   {
@@ -41,13 +47,13 @@ export const SOCIALS: SocialObjects = [
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/diego-franco-roy",
-    linkTitle: `${SITE.title} on LinkedIn`,
+    linkTitle: `${SITE.author} on LinkedIn`,
     active: true,
   },
   {
     name: "Mail",
     href: "mailto:contacto@laultimaneurona.com",
-    linkTitle: `Send an email to ${SITE.title}`,
+    linkTitle: `Send an email to ${SITE.author}`,
     active: true,
   },
   {
