@@ -37,7 +37,7 @@ Para visualizarlo mejor, aquí tienes una ilustración de cómo NGRX maneja el f
 
 5\. Los componentes, que escuchan el estado a través de selectors, reciben automáticamente los cambios y se actualizan en la UI.
 
-![](/NGRX-DIAGRAMA-FLUJO.svg)
+![](</Sin título-2024-06-27-2048.png>)
 
 ### Ejemplo
 
